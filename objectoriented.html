@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"> </p>
+
+
+    <p id="user"> </p>
+
+
+    <p id="pattern"> </p>
+
+
+    <script>
+    
+    var dataObj = {
+        name: "muddabir",
+        profilr: "single",
+        age: 34,
+        dob: "19th august",
+        uni: [1,2,3,4],
+        calculatesal: function(){
+            return this.age+this.uni[0];
+        }
+    }
+    
+
+
+
+
+
+
+
+
+
+function Profile(name,profile,age,gender,size){
+    this.name = name;
+    this.profile = profile;
+    this.age = age;
+    this.size = size;
+this.gender = "male";
+    this.Prvar=  function(num){
+        return age+num
+    }
+}
+
+var muddabir = new Profile("muddabir","single",22,36);
+console.log(muddabir.Prvar(4))
+
+delete muddabir.age;
+console.log(muddabir)
+console.log(muddabir.length)
+
+var count=0;
+for(var key in muddabir){
+    console.log("length of object ",count++);
+}
+
+
+
+
+
+
+// console.log("my object",dataObj);
+
+// console.log("my object",dataObj.calculatesal());
+
+
+
+
+
+
+
+
+
+var locales = {
+  europe: function() {          // The Europe continent's local scope
+    var myFriend = "Monique";
+
+    var france = function() {   // The France country's local scope
+      var paris = function() {  // The Paris city's local scope
+        console.log(myFriend);
+      };
+      
+      paris();
+    };
+
+  france();
+  
+  },
+
+};
+
+
+locales.europe();
+// locales.pakistan();
+
+
+
+
+// var state;    
+// state = "ready";  
+//        // moved to the top
+// console.log(state);   
+
+
+
+// showState();            // output: Ready
+// showState();
+
+// function showState() {
+//   console.log("Ready i am");
+// } 
+
+// var showState = function() {
+//   console.log("Idle");
+// };
+
+
+
+
+// function showState(){        // moved to the top (function declaration)
+//   console.log("Ready");
+// } 
+
+// showState = function(){      // left in place (variable assignment)
+//   console.log("Idle");
+// };
+
+// showState();
+
+
+function myFunction() {
+   carName = "Volvo";
+    function chanegName(){
+        return carName = "toyota"
+    }
+chanegName();
+return carName;
+
+}
+console.log(myFunction());
+
+document.getElementById("demo").innerHTML = "I can display " + carName;
+
+// var counter = 0;
+
+
+document.getElementById("demo").innerHTML = add();
+
+// Function to increment counter
+function add() {
+  var counter = 0; 
+  function add5(){
+      counter += 5;
+  }
+  add5();
+  return counter;
+}
+
+// Call add() 3 times
+add();
+
+
+
+class Students {
+
+constructor(name,age,gender){
+this.name = name;
+this.age = age;
+this.gender = gender;
+}
+
+}
+
+
+class computerScience extends Students {
+    getData(){
+        return this.name + this.age  + this.gender;
+    }
+}
+
+// const mud = new Students("muddu",456,"male");
+// console.log(mud);
+const esh = new computerScience("muddu",4566,"male");
+console.log(esh.getData());
+
+
+
+// document.getElementById("user").innerHTML = display();
+
+
+// function display(){
+//     var id = document.getElementById("user");
+// var li = document.createElement("li");
+// for(var i in esh){
+//     let text = document.createTextNode(esh[i]);
+//     let data = li.append(text);
+//     document.appendChild(data);
+// }
+
+
+// }
+
+
+
+// var st = [34,45,67,23];
+
+
+// var string = "muddabir";
+// for(var i=string.length-1; i>=0; i--){
+//    reversed =   string[i];
+//     console.log(reversed);
+// }
+
+// console.log(string);
+// console.log(string.split("").reverse().join(""));
+
+// var temp = 0;
+
+
+// function arraysort(arr){
+//     for(var i=1; i<arr.length; i++){
+
+// if(arr[i-1]>arr[i]){
+//    temp = arr[i-1];
+//    arr[i-1] = arr[i];
+//    arr[i-1] = temp;
+// }
+// }
+// return arr;
+// }
+
+// console.log(arraysort([45,6,7,89,7,43]));
+
+
+// function bubbleSort(array) {
+//   var done = false;
+//   while (!done) {
+//     done = true;
+//     for (var i = 1; i < array.length; i += 1) {
+//       if (array[i - 1] > array[i]) {
+//         done = false;
+//         var tmp = array[i - 1];
+//         array[i - 1] = array[i];
+//         array[i] = tmp;
+//       }
+//     }
+//   }
+
+//   return array;
+// }
+
+// var numbers = [12, 10, 15, 11, 14, 13, 16];
+// bubbleSort(numbers);
+// console.log(numbers);
+
+
+
+
+
+// console.log(add(34,5));
+
+
+// function add(num1,num2){
+//     var num3 = 8;
+//     function three(){
+//         return num3
+//     }
+//     three();
+
+// return num1+num2+num3;
+// }
+console.log(max);
+
+var arr = [4,56,78,34,617,8];
+var max=arr[0];
+for(var i in arr){
+    if(max<arr[i]){
+        max =arr[i];
+    }
+}
+console.log("maximum is ",max)
+
+
+// let obj = {
+//   a: 1,
+//   b: 2,
+// };
+// let objCopy = Object.assign({}, obj);
+// objCopy.a = "hello";
+// console.log(obj);
+
+
+
+// let obj = {
+//   a: 1,
+//   b: 2,
+// };
+// let copy = obj;
+
+// copy.a = 15;
+// console.log(obj.a);
+
+
+
+let obj = {
+  one: 1,
+  two: 2,
+}
+
+let newObj = { ...obj };
+console.log(newObj);
+
+
+
+
+// for(var i=0; i<10; i++){
+
+// for(var j=0; j<5; j++){
+// console.log("*");
+// }
+// console.log(" \r ")
+// }
+
+
+
+//vertical pyramid 
+// var userinput = prompt("enter value");
+
+
+// for(var i=1; i<userinput; i++){
+
+
+// for(var j=0; j<i; j++)
+// {
+//     // console.log("*");
+//     document.write("*");
+// }
+// // console.log("\r")
+// document.write("<br/>");
+
+// }
+
+// for(var i=1; i<userinput; i++){
+
+
+// for(var j=userinput; j>i; j--)
+// {
+//     // console.log("*");
+//     document.write("*");
+// }
+// // console.log("\r")
+// document.write("<br/>");
+
+
+// }
+
+
+//horizontal pattern
+// var userinput = prompt("enter value");
+
+
+// for(var i=1; i<userinput; i++){
+
+
+// for(var j=0; j<userinput/2; j++)
+// {
+//     // console.log("*");
+//     document.write(" ");
+
+// }
+// // console.log("\r")
+// document.write("*");
+
+
+// }
+
+// for(var i=1; i<userinput; i++){
+
+// for(var j=userinput; j>i; j--)
+// {
+//     // console.log("*");
+//     document.write("*");
+// }
+// // console.log("\r")
+// document.write("<br/>");
+
+// }
+
+
+// var limit = prompt("enter limit ");
+// var sum,num1 = 0;
+// var num2 =1;
+
+// for(var i =0; i<limit; i++){
+//     sum = num1+num2;
+//     num1= num2;
+//     num2=sum;
+//     console.log(sum);
+// }
+
+
+function displayPyramid(n) {
+  for (var i = 0; i < n; i++) {
+    var str = '';
+    console.log(str)
+    for (var j = 1; j < n-i; j++) {
+      str = str + ' ';
+    }
+    for (var k = 1; k <= (2*i+1); k++) {
+      str = str + '*';
+    }
+console.log(str);
+
+  }
+}
+
+displayPyramid(10);
+
+
+
+const pyramid = function(n){
+
+    for (var i = 0; i < n; i++) {
+    var str = '';
+    for (var j = 1; j < n-i; j++) {
+      str = str + ' ';
+    }
+    for (var k = 1; k <= (2*i+1); k++) {
+      str = str + '*';
+     }
+     console.log(str);
+    }
+}
+pyramid(5);
+
+
+// function rightAngle(n){
+
+// for(var i=0; i<=n; i++){
+// var str = '';
+//     for(var j=1; j<i+1; j++){
+//         str = str + '*';
+//     }
+//     console.log(str);
+//  }
+// }
+
+// rightAngle(8);
+
+
+
+function rightAngle(n){
+
+for(var i=0; i<=n; i++){
+var str = '';
+    for(var j=1; j<n-1; j++){
+        str = str + ' ';
+    }
+    for (var k = 1; k <= (i+1); k++) {
+      str = str + '*';
+     }
+    console.log(str);
+ }
+}
+
+
+rightAngle(8);
+
+
+
+var mata = [
+  [3,4,6],
+  [13,32,9],
+  [10,23,3]
+]
+
+for(var i=0; i<mata.length; i++){
+  
+
+
+
+  document.write()
+}
+
+
+
+
+const array =  [
+  [3,4,6],
+  [13,32,9],
+  [10,23,3]
+]
+
+
+const N = array.length;
+for (var i = 0; i < N; ++i) 
+            if (i != N / 2) 
+            { 
+                var temp = array[i][i];              //arr[0][0]=3
+                                                     //temp = 3
+                array[i][i] = array[i][N - i - 1];   //arr[0][0]=6 
+                array[i][N - i - 1] = temp;          //arr[0][2]=3 
+            } 
+  
+        for (var i = 0; i < N; ++i) 
+        { 
+            for (var j = 0; j < N; ++j) 
+                console.log(array[i][j]+" "); 
+            // System.out.prvarln(); 
+        } 
+
+
+for(var i=0; i<5; i++){
+
+var num = 1;
+for(var j=1; j<=i; j++){
+  num+= 1; 
+}
+console.log(num);
+}
+
+// for(var i=0; i<5; i++){
+// document.write(i);
+// document.write("\n");
+// }      
+// function numberTriangleNew(n){
+//   for (var i = 0; i < n; i++) {
+//     var str = '';
+//     for (var j = 1; j < n-i; j++) {
+//       str = str + ' ';
+//     }
+//     for (var k = 1; k <= (2*i+1); k++) {
+//       str = i;
+//       document.write(str);
+//      }
+//      document.write("</br>");
+
+//     }
+// }
+
+
+// numberTriangleNew(6);
+
+
+function numberTriangle(n){
+  for(let i=1; i<=n; i++){
+
+for(let j=1; j<=i; j++){
+  document.write(i);
+}
+ document.write("</br>");
+}
+}
+
+numberTriangle(9);
+
+
+function numberTrianglediff(n){
+  for(let i=1; i<=n; i++){
+
+for(let j=1; j<=i; j++){
+  document.write(j);
+}
+ document.write("</br>");
+}
+}
+
+numberTrianglediff(9);
+
+
+const diamond = function(n){
+
+for (var i = 0; i < n; i++) {
+var str = '';
+for (var j = 1; j < n-i; j++) {
+  str = str + ' ';
+}
+for (var k = 1; k <= (2*i+1); k++) {
+  str = str + '*';
+ }
+ console.log(str);
+}
+}
+
+diamond(5);
+
+
+</script> 
+</body>
+</html> 
+
