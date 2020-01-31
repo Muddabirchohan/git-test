@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <h2> Mixit Technologies  </h2>
+
+<h5> q1 fibonacci series ? </h5> 
+<h5> q2 gcd using recursion ? </h5> 
+
+<script> 
+
+
+// var num1 = 0;
+// var num2 = 1;
+// var sum =0;
+
+// for(var i=0; i<100; i++){
+//     sum = num1+num2;
+//     num1= num2;
+//     num2=sum;
+//     console.log(sum);
+// }
+
+
+
+// var gcd = function(a, b) {
+//     if (!b) {
+//         return a;
+//     }
+
+//     return gcd(b, a % b);
+// };
+// console.log(gcd(2154, 458));
+
+
+
+// var multiArray = [
+//     [1,2,3],
+//     [4,5,6],
+//     [7,8,9],    
+//     ]
+
+// for(var i=0; i<multiArray.length; i++){
+
+// for(var j=0; j<multiArray.length; j++){
+//     console.log(multiArray[i][j])
+// }
+
+
+// }
+
+
+// function bubbleSort(array) {
+//   var done = false;
+//   while (!done) {
+//     done = true;
+//     for (var i = 1; i < array.length; i += 1) {
+//       if (array[i - 1] > array[i]) {
+//         done = false;
+//         var tmp = array[i - 1];
+//         array[i - 1] = array[i];
+//         array[i] = tmp;
+//       }
+//     }
+//   }
+
+//   return array;
+// }
+
+// var numbers = [12, 10, 15, 11, 14, 13, 16];
+// bubbleSort(numbers);
+// console.log(numbers);
+
+// function sortArray(arr){
+
+//   return arr.sort(function(a,b){ 
+//  return a-b;
+//  })
+// }
+
+// console.log(sortArray([2,34,5,67,7,8]));
+
+
+
+// var array=[23,44,5,5,65,2,34,3]
+// console.log(array.sort());
+
+
+
+// const strings = ['a','c','f','d','e'];
+
+// const simpleSort = Array.from(strings).sort((a, b) => a - b);
+// console.log(simpleSort);
+
+// var cloths = ["Shirt", "Pant", "TShirt"];
+// console.log(cloths.pop());
+// console.log(cloths);
+
+// var num1= 8;
+// var num2= num1;
+// num2 = 4;
+// console.log(num1,num2);
+
+// for(let i=0; i<10; i++){
+//   console.log(setTimeout((i),400));
+// }
+
+function firstValue(arr){
+  return arr[2];
+}
+
+console.log(firstValue([3,45,6,4]));
+
+function Printit(name){
+this.name = name
+}
+
+var muddabir = new Printit("hello");
+console.log(muddabir);
+
+var days = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
+var date = new Date();
+var day = date.getDay();
+var hours = date.getHours();
+var min = date.getMinutes();
+var sec = date.getSeconds();
+if(hours>12){
+  console.log(`today is ${days[day]} time is ${hours}: ${min} : ${sec} PM`);
+}
+else 
+console.log(`today is ${days[day]} time is ${hours}: ${min} : ${sec}aM`);
+
+function reveresenum(num){
+  num = num + "";
+  console.log(num);
+  return num.split("").reverse().join("");
+}
+console.log(reveresenum(345656));
+
+
+
+function stringpalindrome(str){
+
+let reverse =  str.split("").reverse().join("");
+if(str == reverse){
+  console.log("palindrome")
+}
+else 
+console.log("not a ...")
+
+}
+
+stringpalindrome("abba");
+
+
+
+
+
+
+var array = [34,54,56,7,83,23];
+var temp =0
+
+for(let i=0; i<array.length; i++){
+
+// if(array[i]>array[i++]){
+// temp = array[i];
+// array[i] = array[i++];
+// array[i++] = temp;
+// }
+array.sort(function(a,b){
+  return b-a
+})
+console.log(array[i])
+}
+
+
+var arrsort = [45,56,63,45,4,56];
+
+// for(var i=0; i<arrsort.length; arrsort++){
+//   var finalArray = [];
+//   if(arrsort[i] === arrsort[i++] ){
+//       finalArray.push(arrsort[i]);
+//   }
+//   console.log("duplicates ",finalArray);
+// }
+
+
+
+var jobsUnique = arrsort.filter(function(item, index){
+	return arrsort.indexOf(item) >= index;
+});
+
+
+
+console.log(jobsUnique);
+
+
+
+function remove_duplicates_safe(arr) {
+    var seen = {};
+    var ret_arr = [];
+    for (var i = 0; i < arr.length; i++) {
+        if (!(arr[i] in seen)) {
+          console.log(seen);
+            ret_arr.push(arr[i]);
+            seen[arr[i]] = true;
+        }
+    }
+    return ret_arr;
+}
+
+console.log(remove_duplicates_safe([3,3,13,45,6,87,3,56,45]));
+
+
+
+
+
+function getDistinctArray(arr) {
+    return [...new Set(arr)];
+}
+
+console.log(getDistinctArray([45,56,63,45,4,56]));
+
+// let arr = [256,63,411,156];
+
+// for(var k=0; k<arr.length; k++){
+
+//   var min = arr[0];
+//   var temp = 0;
+
+//   if(min>arr[k]){
+
+//     min = arr[k];
+//     arr[k] = arr[k++];
+//     arr[k++] = min;
+  
+//   }
+// }
+
+
+console.log("minimum",min);
+
+
+// let arr = [215,63,41,,45,66565,15];
+
+// for(var k=0; k<arr.length; k++){
+
+//   var max = arr[0];
+//   if(max<arr[k]){
+//     max = arr[k];
+//     arr[k] = arr[k++];
+//     arr[k++] = max;
+//   }
+// }
+
+// console.log("maximum",max);
+
+
+function fact(num){
+
+if(num === 0){
+  return 1;
+}
+
+return num * fact(num - 1);
+}
+
+
+console.log(fact(4));
+
+
+
+
+function factorial(num){
+for(var i=0; i<=num; i++){
+if(num === 0){
+ return num =1;
+}
+}
+
+return num;
+}
+
+console.log(factorial(3));
+
+
+
+
+
+
+
+function factorialize(num) {
+  var result = num;
+   
+  if (num === 0 || num === 1) 
+    return 1; 
+ 
+  while (num > 1) { 
+    num--; 
+    result = result * num; 
+  }
+  return result; 
+}
+
+console.log(factorialize(5));
+
+// function numberTriangle(num){
+
+// for(var j=1; j<=num; j++){
+
+// for(var k=0; k<=j; k++){
+//   num +=num;
+// console.log(num);
+//   }
+//  }
+// }
+
+// numberTriangle(4);
+
+// function removeCharFromString(str,index){
+// // for(var i=0; i<str.length; i++){
+// // }
+// var first = str.slice(0,index-1);
+// var second = str.slice(index);
+// return first + second;
+// }
+// console.log(removeCharFromString("muddabir",5));
+
+
+// function removeCharFromString(str){
+// return str.splice(2,0,'s');
+// }
+// console.log(removeCharFromString(['a','s','d','e','r']));
+
+var data = ['a','s','d','e','r'];
+function addToArray(){
+  return data.splice(2,0,'s');
+}
+
+addToArray();
+console.log(data);
+
+// var replace = function(text,rep){
+//   return text.replace(/hello/i,rep)
+// }
+
+// console.log(replace("hello im leaving, oh hello","bye"))
+
+
+
+
+
+var replaces = function(original,replacement,source){
+  return function(source){
+    return source.replace(original,replacement);
+  }
+}
+
+var d1 = replaces(/hello/i,"bye");
+
+console.log(d1("hello its me"));
+
+
+
+
+// var attitude = function(original, replacement, source) {
+//   return function(source) {
+//     return source.replace(original, replacement);
+//   };
+// };
+
+// var snakify = attitude(/millenials/ig, "Snake People");
+// var hippify = attitude(/baby boomers/ig, "Aging Hippies");
+
+// console.log(snakify("The Millenials are always up to something."));
+// // The Snake People are always up to something.
+// console.log(hippify("The Baby Boomers just look the other way."));
+
+
+// var myarr = [34,56,6,78,7,5];
+
+// for(var i=0; i<myarr.length; i++){
+//   var max= myarr[0];
+//    if(max<arr[i]){
+//     max = myarr[i];
+//     myarr[i] = myarr[i++];
+//     myarr[i++] = max;
+//    }
+// }
+// console.log("the maximum number is found to be : ",max);
+
+
+
+var testArray = [215,63,41,450,45,4,567,87879889,56565,78,7,66565,15,45000000345];
+let maximum = testArray[0];
+for (let i = 1; i < testArray.length; ++i) {
+  if (testArray[i] > maximum) {
+    maximum = testArray[i];
+  }
+}
+
+
+
+
+function myfact(num){
+var result=num;
+if(num == 0 || num == 1){
+  return 1
+}
+
+while(num>1){
+  num--;
+  result = result*num;
+}
+
+return result
+
+}
+
+
+
+console.log(myfact(6));
+
+
+function myFactRecursion(num){
+
+if(num == 0 || num == 1 ){
+  return 1;
+}
+
+return num * myFactRecursion(num-1)
+
+}
+
+console.log(myFactRecursion(5));
+
+
+var anotherarray = [34,5,67,41,5,234,23,24,566,13]
+
+
+var mymax = anotherarray[0];
+for(var i=1; i<anotherarray.length; ++i){
+    if(anotherarray[i] > mymax){
+      mymax = anotherarray[i];
+    }
+}
+
+console.log(mymax);
+
+
+
+
+var mymin = anotherarray[0];
+for(var i=1; i<anotherarray.length; ++i){
+    if(anotherarray[i] < mymin){
+      mymin = anotherarray[i];
+    }
+}
+
+console.log(mymin);
+//console.log(maximum);
+
+
+
+function mystrreverse(str){
+// let res = str;
+let palindrome =  str.split('').reverse().join('');
+if(str == palindrome){
+  alert("palindrome")
+}
+else 
+alert("not a palindrome")
+}
+// console.log(mystrreverse("racescar"));
+
+
+
+
+
+
+for(var l=0; l<7; l++){
+
+for(var m=1; m<=7; m++){
+  document.write("&nbsp");
+  for(var n=0; n<(2*l+1); n++){
+    document.write("*")
+
+  }
+// document.write("*")
+}
+document.write("</br>")
+}
+
+
+
+function mybubbleSort(array) {
+  var done = false;
+  while (!done) {
+    done = true;
+    for (var i = 1; i < array.length; i += 1) {
+      if (array[i - 1] > array[i]) {
+        done = false;
+        var tmp = array[i - 1];
+        array[i - 1] = array[i];
+        array[i] = tmp;
+      }
+    }
+  }
+  return array;
+}
+document.write(mybubbleSort([45,34,65,56,62,58,63]));
+
+
+
+function linearSearch(value, list) {
+    let found = false;
+    let position = -1;
+    let index = 0;
+ 
+    while(!found && index < list.length) {
+        if(list[index] == value) {
+            found = true;
+            position = index;
+        } else {
+            index += 1;
+        }
+    }
+    return position;
+}
+
+
+function linearSearch(value,list){
+
+let found = false;
+let position = -1;
+let index = 0;
+
+while(!found && index < list.length){
+  if(list[index] == value){
+    found = true;
+    position = index;
+  }
+  else {
+    index +=1;
+  }
+}
+return position;
+}
+console.log(linearSearch(7,[34,5,67,4,56,7,4]));
+
+
+function binarySearch(value, list) {
+
+    let first = 0;                //left endpoint
+    let last = list.length - 1;   //right endpoint
+    let position = -1;
+    let found = false;
+    let middle;
+
+    while (found === false && first <= last) {
+        middle = Math.floor((first + last)/2);
+        console.log("middle",middle);
+        if (list[middle] == value) {
+            found = true;
+            position = middle;
+        } else if (list[middle] > value) {  //if in lower half
+            last = middle - 1;
+        } else {  //in upper half
+            first = middle + 1;
+        }
+    }
+    return position;
+}
+
+console.log(binarySearch(7,[34,5,67,4,56,7,4,5]));
+
+
+var num1=0,num2=1,sum=0;
+console.log(num1,num2);
+while(sum<=8){
+
+    sum= num1+num2;
+    num1 = num2;
+    num2 = sum;
+    console.log(sum);
+
+}
+
+
+
+
+var n=12345, reverse = 0;
+
+while(n!=0){
+  reverese = reverse*10;
+  reverse = reverse + n%10;
+  n = n/10;
+}
+
+console.log(reverse,n);
+
+
+
+function flipInt(n){
+    var digit, result = 0;
+
+    while( n ){
+        digit = n % 10;                 // get last digit. 123/10 -> 12.3 -> 3
+        result = (result * 10) + digit; // 123 -> 1230 + 4 => 1234
+        n = n/10|0;  
+        console.log(digit,result,n);                   // remove last digit. 123 -> 12.3 -> 12
+    }  
+  
+    return result;
+}
+
+
+alert(
+  "Reverse number: " + flipInt( +prompt("Enter a value") ) 
+)
+
+
+
+</script>
+</body>
+</html>
